@@ -1,0 +1,15 @@
+Установка dajngo
+MacBook-Air-Ekaterina:~ ekaterinakoseleva$ cd djangogirls
+MacBook-Air-Ekaterina:djangogirls ekaterinakoseleva$ python3 -m venv myvenv
+MacBook-Air-Ekaterina:djangogirls ekaterinakoseleva$ source myvenv/bin/activate
+(myvenv) MacBook-Air-Ekaterina:djangogirls ekaterinakoseleva$ python3 -m pip install --upgrade pip
+(myvenv) MacBook-Air-Ekaterina:djangogirls ekaterinakoseleva$ pip install Django
+(myvenv) MacBook-Air-Ekaterina:djangogirls ekaterinakoseleva$ python manage.py runserver
+Watching for file changes with StatReloader
+Performing system checks...
+
+System check identified no issues (0 silenced).
+June 24, 2020 - 00:06:58
+Django version 3.0.6, using settings 'mysite.settings'
+Starting development server at http://127.0.0.1:8000/
+Quit the server with CONTROL-C.

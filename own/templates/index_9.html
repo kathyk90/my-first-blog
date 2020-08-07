@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+            <html lang="ru">
+            <head>
+                <meta charset="UTF-8">
+                <title>Quest-X</title>
+            </head>
+              <body>
+                <p> {{ a }}</p>
+
+            </body>
+              </html>
+              <!doctype html>
+              {% load static %}
+              <html lang="en">
+                <head>
+                  <meta charset="utf-8">
+                  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no, user-scalable=0">
+                  <meta name="description" content="Lewis - Creative Portfolio HTML Template">
+                  <meta name="author" content="Paul, Logan Cee">
+
+                  <title>Quest-X</title>
+
+                  <!-- CSS -->
+                  <link href="{% static 'Ethant Hunt/html/html/css/bootstrap.min.css' %}" rel="stylesheet">
+                  <link href="{% static 'Ethant Hunt/html/html/css/jquery.pagepiling.css'%}" rel="stylesheet">
+                  <link href="{% static 'Ethant Hunt/html/html/css/owl.carousel.min.css' %}" rel="stylesheet">
+                  <link href="{% static 'Ethant Hunt/html/html/css/owl.theme.default.min.css' %}" rel="stylesheet">
+                  <link href="{% static 'Ethant Hunt/html/html/css/animate.min.css' %}" rel="stylesheet">
+
+                  <!-- Main CSS -->
+                  <link href="{% static 'Ethant Hunt/html/html/css/style.css' %}" rel="stylesheet">
+
+                </head>
+
+                <body class="body-piling">
+                  <div class="wrapper">
+                    <header id="header" class="header">
+                      <div class="container-fluid">
+                        <div class="brand">
+                          <a href="#About" class="brand-name">Quest-X<span class="brand-name-s"><br><br>  5/6</span></a>
+                        </div>
+
+                        <button class="nav-toggle-btn a-nav-toggle">
+                          <span class="hamburger">
+                            <span class="top-bun"></span>
+                            <span class="meat"></span>
+                            <span class="bottom-bun"></span>
+                          </span>
+                        </button>
+
+                        <div class="hide-menu a-nav-toggle"></div>
+
+                        <div class="menu">
+                          <div class="menu-lang">
+                            <a href="#" class="menu-lang-item active"></a>
+                            <a href="#" class="menu-lang-item"></a>
+                            <a href="#" class="menu-lang-item"></a>
+                          </div>
+
+                          <div class="menu-main" id="accordion">
+                            <ul id="menuMain">
+                                  <li data-menuanchor="About"><a a href="{% url 'hello:quest' %}" >Главная</a></li>
+                              <li data-menuanchor="Services"><a a href="{% url 'accounts:questx' %}" >Создать квест</a></li>
+                              <li data-menuanchor="Skills"><a href="{% url 'accounts:trai' %}">Разгадать квест</a></li>
+                              <li data-menuanchor="Contact"><a href="{% url 'accounts:contacts' %}">Контакты</a></li>
+                            </ul>
+                          </div>
+
+                          <div class="menu-footer">
+                            <div class="menu-footer-contacts">
+                              <div class="menu-footer-phone"><a href="tel:+79163912391" class="phone-link">+7-916-391-23-91</a></div>
+                              <div class="menu-footer-mail"><a href="mailto:e.koshelevi@gmail.com" class="mail-link">e.koshelevi@gmail.com</a></div>
+                            </div>
+                            <div class="menu-footer-copyright">&copy; Quest-X 2020. All Rights Reseverd</div>
+                          </div>
+                          <div class="menu-ornament"></div>
+                        </div>
+                      </div>
+                    </header>
+
+
+                    <div id="content">
+                      <div class="a-pagepiling full-page">
+                        <div class="section pp-scrollable slide slide-about a-slide-typed" data-name="testimonials">
+                          <div class="slide-container">
+                            <div class="lines"><div></div><div></div><div></div><div></div></div>
+
+
+                            <div class="section pp-scrollable slide slide-testimonials">
+                              <div class="slide-container">
+                                <div class="lines"><div></div><div></div><div></div><div></div></div>
+                                <div class="container">
+                                  <div class="row align-items-center flex-row-reverse">
+                                    <div class="col-md-5">
+                                      <div class="animate-element delay5 fadeInUp">
+                                        <div class="title-mini title-mini-margin-lg text-primary" align='center'>Пятый вопрос:</div>
+                                        <h3 class="slide-title font-custom" style='font-family: Comic Sans MS; font-size: 45px;'>{% if latest_question_list %}
+                                            <ul>
+                                            {% for question in latest_question_list %}
+                                                <li><a href="{% url 'own:detail_5' question.id %}">{{ question.question_text }}</a></li>
+                                            {% endfor %}</h3>
+                                      </div>
+
+                                      <div class="testimonial-carousel a-testimonial-carousel owl-carousel owl-theme animate-element delay7 fadeInUp">
+                                        <div class="testimonial-item">
+                                          <div class="slide-descr testimonial-item-text">  {% if choice.correct %}
+                                          <ul>
+                                            {% for choice in choice.choice_text %}
+                                            <h2> {{ choice.choice_text }} </h2>
+                                            {% endfor %}
+                                            {% endif %}
+                                            </ul>
+                                            {% else %}
+                                                <p>No polls are available.</p>
+                                            {% endif %}
+
+  <div class="inside"><div class="education-image"><img src="{% static 'Ethant Hunt/html/html/img/shape2.png' %}" alt="" /></div></div>
+                                            </div>
+                                          </div>
+
+
+
+                                      </div>
+                                    </div>
+                                    <div class="col-md-1"></div>
+                                    <div class="col-md-6">
+                                      <div class="slide-photo slide-photo-testimonials">
+                                        <div class="slide-photo-bg-rounded photo-bg-education animate-element delay5 bounceIn" align='center'>
+                                          <div class="inside"><div class="education-image"><img src="{% static 'Ethant Hunt/html/html/img/question5.png' %}" alt="" /></div></div>
+                                        </div>
+
+                                        </div>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+
+
+                                  <footer id="footer" class="footer">
+                                    <div class="container-fluid">
+                                      <div class="copyright">Quest-X 2020.</div>
+                                      <div class="footer-social">
+
+                                        <div class="chat">
+                                          <div class="chat-title">Quest-X</div>
+
+                                        </div>
+                                      </div>
+                                    </div>
+                                  </footer>
+
+
+                                  <div class="progress-nav">
+                                    <ul id="menu">
+                                      <li data-menuanchor="About"></li>
+                                      <li data-menuanchor="Services" ></li>
+                                      <li data-menuanchor="Skills"></li>
+                                      <li data-menuanchor="Resume"></li>
+                                      <li data-menuanchor="Portfolio" ></li>
+                                      <li data-menuanchor="Awards" class="active" ></li>
+                                      <li data-menuanchor="Testimonials"></li>
+                                      <li data-menuanchor="Clients"></li>
+                                      <li data-menuanchor="Contact"></li>
+                                    </ul>
+                                  </div>
+
+
+                                </div>
+
+
+
+
+
+                                <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+                                <script>window.jQuery || document.write('<script src="{% static 'Ethant Hunt/html/html/js/jquery.min.js' %}"><\/script>')</script>
+                                <script src="{% static 'Ethant Hunt/html/html/js/smoothscroll.js' %}"></script>
+                                <script src="{% static 'Ethant Hunt/html/html/js/popper.min.js' %}"></script>
+                                <script src="{% static 'Ethant Hunt/html/html/js/bootstrap.min.js' %}"></script>
+                                <script src="{% static 'Ethant Hunt/html/html/js/owl.carousel.min.js' %}"></script>
+                                <script src="{% static 'Ethant Hunt/html/html/js/jquery.pagepiling.min.js' %}"></script>
+                                <script src="{% static 'Ethant Hunt/html/html/js/jquery.viewport.js' %}"></script>
+                                <script src="{% static 'Ethant Hunt/html/html/js/jquery.countdown.min.js' %}"></script>
+                                <script src="{% static 'Ethant Hunt/html/html/js/typed.min.js' %}"></script>
+                                <script src="{% static 'Ethant Hunt/html/html/js/parallax.min.js' %}"></script>
+                                <script src="{% static 'Ethant Hunt/html/html/js/jquery.validate.min.js' %}"></script>
+                                <script src="{% static 'Ethant Hunt/html/html/js/script.js' %}"></script>
+
+                              </body>
+                            </html>

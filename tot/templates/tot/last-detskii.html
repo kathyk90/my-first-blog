@@ -1,0 +1,279 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en-US">
+
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <link rel="shortcut icon" href="{% static 'img/cropped-favicon-192x192.png' %}" />
+    <title>Quest-X</title>
+
+    <link rel='stylesheet' href="{% static 'css/font-awesome.css' %}" type='text/css' media='all' />
+    <link rel='stylesheet' href="{% static 'css/jquery.fancybox.css' %}" type='text/css' media='all' />
+    <link rel='stylesheet' href="{% static 'css/select2.css' %}" type='text/css' media='all' />
+    <link rel='stylesheet' href="{% static 'css/animate.css' %}" type='text/css' media='all' />
+    <link rel='stylesheet' href="{% static 'css/main.css' %}" type='text/css' media='all' />
+    <link rel='stylesheet' href="{% static 'css/shop.css' %}" type='text/css' media='all' />
+    <script type='text/javascript' src="{% static 'js/jquery.js' %}"></script>
+    <script type='text/javascript' src="{% static 'js/jquery-migrate.min.js' %}"></script>
+    <link rel='stylesheet' href='tuner/style.css' type='text/css' media='all' />
+    <link rel="icon" href="{% static 'img/cropped-favicon-32x32.png' %}" sizes="32x32" />
+    <link rel="icon" href="{% static 'img/cropped-favicon-192x192.png' %}" sizes="192x192" />
+    <link rel="apple-touch-icon-precomposed" href="{% static 'img/cropped-favicon-180x180.png' %}">
+    <meta name="msapplication-TileImage" content="{% static 'img/cropped-favicon-270x270.png' %}">
+</head>
+
+<body class="page wide wave-style">
+    <div class="page">
+        <div class='site_top_panel wave slider'>
+            <!-- top canvas -->
+            <div class='top_half_sin_wrapper'>
+                <canvas class='top_half_sin' data-bg-color='#ffffff' data-line-color='#ffffff'></canvas>
+            </div>
+            <!-- / top canvas -->
+            <!-- top panel  -->
+            <div class='container'>
+                <div class='row_text_search'>
+                    <div id='top_panel_text'><a href="tel:+7-916-391-2-391"><i class="fa fa-phone-square"></i> +7916-391-2-391 </a>;
+                        <a href="mailto:e.koshelevi@gmail.com"> <i class="fa fa-envelope-o"></i>e.koshelevi@gmail.com</a>
+                    </div>
+
+                        </div>
+                    </div>
+
+                  </div>
+                <div class="site_top_panel_toggle"></div>
+            </div>
+            <!-- / top panel  -->
+        </div>
+        <!-- slider and menu -->
+        <div class='slider_vs_menu'>
+            <div class='header_cont'>
+                <!-- header pattern -->
+                <div class='header_mask'>
+                    <div class='header_pattern'></div>
+                </div>
+                <!-- / header pattern -->
+                <header class='site_header logo-in-menu' data-menu-after="3">
+                    <div class="header_box">
+                        <div class="container">
+                            <!-- logo -->
+                            <div class="header_logo_part with_border" role="banner">
+                                <a class="logo" href="{% static  "index-2.html" %}"><img src= "{% static 'img/logo1-304vqrnv7ccxz47xp4tw5m.png' %}" data-at2x="{% static 'img/logo1-304vqrnv7ccxz47xp4tw5m@2x.png' %}"  alt /></a>
+                            </div>
+                            <!-- / logo -->
+                            <!-- menu -->
+                            <div class="header_nav_part">
+                                <nav class="main-nav-container a-right">
+                                    <div class="mobile_menu_header">
+                                        <i class="mobile_menu_switcher"><span></span><span></span><span></span></i>
+                                    </div>
+                                    <ul id="menu-main-menu" class="main-menu menu-bees">
+                                        <!-- menu item -->
+                                        <li class="menu-item current-menu-ancestor current-menu-parent current_page_parent current_page_ancestor menu-item-has-children bees-start">
+                                            <a href="info.html">
+                                                <div class="bees bees-start"><span></span>
+                                                    <div class="line-one"></div>
+                                                    <div class="line-two"></div>
+                                                </div>Home
+                                                <div class="canvas_wrapper">
+                                                    <canvas class="menu_dashed"></canvas>
+                                                </div>
+                                            </a>
+                                            <span class='button_open'></span>
+                                            <ul class="sub-menu">
+                                                <li class="menu-item back"><a href="#"><em>←</em>&nbsp;BACK</a>
+                                                </li>
+                                                <li class="menu-item"><a href="creat">Создать квест</a></li>
+                                                <li class="menu-item current-menu-item page_item current_page_item"><a href="go">Пройти квест</a></li>
+
+                                            </ul>
+                                        </li>
+                        <!-- / menu -->
+                    </div>
+                </div>
+            </header>
+            <!-- #masthead -->
+        </div>
+        <!-- / header container -->
+        <!-- breadcrumbs -->
+        <section class='page_title wave'>
+          <div class='container'>
+              <div class='title'>
+                  <h1></h1></div>
+              <nav class="bread-crumbs"><a href="index-2.html" ></a><i class="delimiter fa fa-chevron-right"></i><span class="current"></span></nav>
+              <!-- .breadcrumbs -->
+          </div>
+            <canvas class='breadcrumbs' data-bg-color='#f8f2dc' data-line-color='#f9e8b2'></canvas>
+        </section>
+        <!-- / breadcrumbs -->
+        <div class="grid_row clearfix" style="padding-top: 50px;padding-bottom: 50px;">
+            <div class="grid_col grid_col_12">
+                <div class="ce clearfix">
+                    <div>
+                      <h1 style='font-family: Bradley Hand; text-align: center; font-size: 28px;'>Вспомни все цифры, которые ты получил(-а)!<br><br>
+                      Это твой последний шанс получить секретное сообщение, которое подготовлено для тебя!</h1>
+                        <hr>
+
+                                <div class='msg_box_text'><button  style='font-family: Bradley Hand; text-align: center; font-size: 28px;' onclick="text.style.display='block'">Показать подсказку</button>
+                                <p id="text" style="display: none">
+                                {{ d_2 }}
+                                </p></div>
+                            </div>
+                        </div>
+                      </div>
+                    </div>
+
+        <!-- main container -->
+        <div id="main" class="site-main">
+            <div class="page_content double_sidebar">
+                <!-- pattern container / -->
+                <div class='left-pattern pattern pattern-2'></div>
+                <div class='container'>
+                    <!-- sidebar -->
+                    <aside class='sb_left'>
+                        <!-- widget portfolio -->
+
+
+                    </aside>
+                    <!-- / sidebar -->
+                    <!-- sidebar -->
+                    <aside class='sb_right'>
+                        <!-- widget search -->
+
+                        <!-- / widget search -->
+                        <!-- widget menu -->
+
+                    </aside>
+                    <!-- / sidebar -->
+                    <!-- main content -->
+
+                    <main>
+
+                        <div class='grid_row clearfix'>
+                            <div class='grid_col grid_col_12'>
+                                <div class='ce clearfix'>
+
+                                    <div>
+                                        <img class="noborder alignleft image-type" src=" {% static 'pic/2015/04/pic_typorgaphy-300x300.jpg' %}" alt="pic_typorgaphy" width='150' height="150" />
+                                        <ul class="checkmarks_style">
+
+                                        </ul>
+
+                                </div>
+                                <div class='ce clearfix'>
+                                    <div class='cws_callout'>
+                                        <div class='content_section'>
+                                            <div class='callout_title' style='font-family: Bradley Hand;'>
+
+
+
+
+                                            <div class='center'>
+                                              <style>
+   .center {
+    width: 300px;
+    padding: 10px;
+    margin: auto;
+    text-align: center;
+    font-family: Bradley Hand;
+    font-size: 40px; /* Выравниваем по центру */
+   }
+  </style>
+
+
+                                                <p> <form action="{% url 'tot:last_chance' %}" method="post"> {% csrf_token %}
+                                                    Итак, код от сейфа: <br><br>
+                                         <div style='font-family: Bradley Hand; font-size: 20px;'>
+                                           <input type="number"  class="colortext" name="cod"><br><br><br>
+                                           <input type="hidden" name="code" value="{{ d_2 }}">
+                                           <input type="submit" value="Проверить">
+
+
+
+
+                                   </form> </p>
+                                                   </div>
+                                                     <style>
+ .colortext {
+  background-color: #ffe; /* Цвет фона */
+  color: #000000; /* Цвет текста */
+  font-family: Bradley Hand;
+  margin: auto;
+  text-align: center;
+ }
+</style>
+
+
+                                      </form>
+
+                                  </body>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- / contact us -->
+                    </main>
+                    <!-- pattern block // -->
+                    <div class='right-pattern pattern pattern-2'></div>
+                    <!-- footer image block // -->
+                    <div class="footer_image"></div>
+                </div>
+                <!-- / page container -->
+                <!-- svg filter -->
+                <svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="0" style='display:none;'>
+                    <defs>
+                        <filter id="goo">
+                            <feGaussianBlur in="SourceGraphic" stdDeviation="6" result="blur" />
+                            <feColorMatrix in="blur" type="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 19 -9" result="goo" />
+                            <feComposite in="SourceGraphic" in2="goo" operator="atop" />
+                        </filter>
+                    </defs>
+                </svg>
+                <!-- / svg filter -->
+            </div>
+            <!-- #main -->
+            <!-- footer -->
+            <div class='footer_wrapper_copyright'>
+                <!-- canvas -->
+                <div class='half_sin_wrapper'>
+                    <canvas class='half_sin' data-bg-color='23,108,129' data-line-color='23,108,129'></canvas>
+                </div>
+                <!-- / canvas -->
+                <footer class='page_footer'>
+                    <div class='container'>
+                        <div class='footer_container'>
+                            <!-- about us -->
+                            <div class="cws-widget">
+                                <div class="widget-title"></div>
+                                <div class="textwidget">
+                                  <hr></div>
+                            </div>
+
+
+        <script type='text/javascript' src="{% static 'js/retina_1.3.0.js'%}"></script>
+        <script type='text/javascript' src="{% static 'js/modernizr.js' %}"></script>
+        <script type='text/javascript' src="{% static 'js/owl.carousel.js' %}"></script>
+        <script type='text/javascript' src="{% static 'js/TweenMax.min.js' %}"></script>
+        <script type='text/javascript' src="{% static 'js/jquery.isotope.min.js' %}"></script>
+        <script type='text/javascript' src="{% static 'js/jquery.fancybox.js' %}"></script>
+        <script type='text/javascript' src="{% static 'js/select2.min.js' %}"></script>
+        <script type='text/javascript' src="{% static 'js/wow.min.js' %}"></script>
+        <script type='text/javascript' src="{% static 'js/jquery.validate.min.js' %}"></script>
+        <script type='text/javascript' src="{% static "js/jquery.form.min.js" %}"></script>
+        <script type='text/javascript' src="{% static 'js/scripts.js'%}" ></script>
+        <script type='text/javascript' src="{% static "js/jquery.tweet.js"%}"></script>
+    </body>
+
+
+    </html>
+    <style>
+          input[type="number"] {
+              -moz-appearance: textfield;
+          }
+          input[type="number"]::-webkit-inner-spin-button {
+              display: none;
+          }
+      </style>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Quest-X</title>
+   <h1>Это правильный ответ!</h1>
+   <h2>Это последняя цифра кода. Смотри ниже!</h2>
+    <h1>{{ cret_2 }}</h1>
+
+</head>
+<body>
+  <div><img class="image" src="https://code.s3.yandex.net/web-code/procrastinate/9.png"></div>
+    <form action="/tot/" method="post">  {% csrf_token %}
+    <br><br>
+         Введи код от сейфа: <input type="number" name="cod"><br><br>
+      <input type="submit" value="Проверим...">
+  </form>
+</body>
+</html>
+<style>
+      input[type="number"] {
+          -moz-appearance: textfield;
+      }
+      input[type="number"]::-webkit-inner-spin-button {
+          display: none;
+      }
+  </style>

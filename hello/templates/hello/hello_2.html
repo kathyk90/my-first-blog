@@ -1,0 +1,13 @@
+html>
+<head>
+   <h1> Добро пожаловать в Quest-X</h1>
+</head>
+<body>
+  <p> Для Вас подготовлен необычайный шифр,разгадайте его и узнайте тайну века!!</p>
+  <div><img class="image" src="https://code.s3.yandex.net/web-code/procrastinate/9.png"></div>
+    {% csrf_token %}
+  <form action="/polls/">
+    <button type="submit">Начать!</button>
+</form>
+</body>
+</html>

@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Quest-X</title>
+</head>
+  <body>
+    <div><img class="image" src=""></div>
+    <h1> Введите PIN {{ d }}:</h1>
+    <form action='{% url 'accounts:tries' %}'method="post">
+      {% csrf_token %}
+      <p><label for="id_pin">PIN:</label>
+          <input type="text" name="pin" id="id_pin" /></p>
+        <input type="text" name="message" id="id_message" /></p>
+        <input type="submit" value="Готово">
+      </form>
+  </body>
+  </html>

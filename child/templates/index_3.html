@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Quest-X</title>
+    <p> 3/3</p>
+    <h1> Ваш третий вопрос:</h1>
+</head>
+{% if latest_question_list %}
+    <ul>
+    {% for question in latest_question_list %}
+        <li><a href="{% url 'child:detail_3' question.id %}">{{ question.question_text }}</a></li>
+    {% endfor %}
+    </ul>
+{% if choice.correct %}
+<ul>
+  {% for choice in choice.choice_text %}
+  <h2> {{ choice.choice_text }} </h2>
+  {% endfor %}
+  {% endif %}
+  </ul>
+{% else %}
+    <p>No polls are available.</p>
+{% endif %}
+</html>

@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Quest-X</title>
+</head>
+  <body>{% csrf_token %}
+<p><b>Сколько вопросов должно быть в квесте?</b></p>
+<p><input name="quantity_text" type="radio" value="3">3</p>
+<p><input name="quantity_text" type="radio" value="6">6</p>
+<p><input name="quantity_text" type="radio" value="9" checked>9</p>
+<p><input type="submit" value="Выбрать"></p>
+</body>
+</html>

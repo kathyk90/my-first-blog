@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Quest-X</title>
+    <h1> Выберите правильный ответ:<h1>
+  <h2>{{ question.question_text }}</h2>
+
+{% if error_message %}<p><strong>{{ error_message }}</strong></p>{% endif %}
+
+<form action="{% url 'a_9:answer' question.id %}" method="post">
+{% csrf_token %}
+{% for choice in question.choice_set.all %}
+    <input type="radio" name="choice" id="choice{{ forloop.revcounter }}" value="{{ choice.id }}" />
+    <label for="choice{{ forloop.revcounter }}">{{ choice.choice_text }}</label><br />
+{% endfor %}
+<input type="submit" value="Ответить" />
+</form>

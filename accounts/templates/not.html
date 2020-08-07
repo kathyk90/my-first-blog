@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Quest-X</title>
+</head>
+  <body>
+    <div><img class="image" src=""></div>
+    <h1> {{ quantity }}Ваш Pin-код не верен. </h1>
+    <p> Пожалуйста, уточните код и введите снова </p>
+      </form>
+      <form action="{% url 'accounts:trai' %}" method="post">  {% csrf_token %}
+          <input type="submit" value="Исправить">
+      </form>
+  </body>
+  </html>

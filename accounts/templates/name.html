@@ -1,0 +1,7 @@
+<form action='/accounts/your_name/' method='post'>
+  {% csrf_token %}
+   <label for='your_name'>Ваше имя:</label>
+   <input id='your_name' type='text'
+   name='your_name' value='{{ current_name}}'
+   <input type='submit' value='ok'>
+   </form>

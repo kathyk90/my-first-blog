@@ -1,0 +1,21 @@
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Quest-X</title>
+{% load static %}
+<link rel="stylesheet" type="text/css" href="{% static 'style.css' %}" />
+</head>
+<body>
+  <header>
+   <div class='overlay'>
+     <h1>Добрый день!</h1>
+     <h2>Мы рады Вас приветствовать в Quest-X</h2>
+   </div>
+ </header>
+  <p> Для Вас подготовлен невероятный квест, разгадав шифр, Вы получите доступ к тайнам мироздания!</p>
+  <p>!Здесь нужно добавить описание проекта!</p>
+    <form action="{% url 'a_6:index' %}" method="post">
+      {% csrf_token %}
+            <input type="submit" value="Я готов!">
+    </form>
+</body>
