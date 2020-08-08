@@ -52,7 +52,7 @@ INSTALLED_APPS = [
     'child_9',
     'a_6',
     'a_9',
-    'crispy_forms'
+   
     
     
 
@@ -60,7 +60,6 @@ INSTALLED_APPS = [
 
 ]
 
-CRISPY_TEMPLATE_PACK = 'bootstrap4'
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
