@@ -18,6 +18,5 @@ class Migration(migrations.Migration):
             model_name='age',
             name='id',
             field=models.AutoField(auto_created=True, default='1', primary_key=True, serialize=False, verbose_name='ID'),
-            preserve_default=False,
         ),
     ]
