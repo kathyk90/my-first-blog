@@ -188,7 +188,6 @@ def creation(request):
         return render(request, 'create.html', {'pin': pin, 'k': k, 'j': j, 'l': l})
 
 def question(request):
-    ida = 5
     q = Question_own()
     if request.method == 'POST':
         b = request.POST.get('question')
@@ -201,7 +200,6 @@ def question(request):
         p = request.POST.get('pin')
         q.question_text = b
         q.pub_date  = '2020-06-24 00:47'
-        q.id = ida
         q.save()
         f = Choice.objects.bulk_create([
             Choice(question=q, choice_text=c, correct=False),
@@ -215,7 +213,6 @@ def question(request):
         return render(request, 'question.html',{'pin': pin, 'k': k, 'j': j, 'l': l})
 
 def question_2(request):
-    ida = 3
     q = Question_own()
     if request.method == 'POST':
         b = request.POST.get('question')
@@ -228,7 +225,6 @@ def question_2(request):
         p = request.POST.get('pin')
         q.question_text = b
         q.pub_date  = '2020-06-24 00:47'
-        q.id = ida
         q.save()
         f = Choice.objects.bulk_create([
             Choice(question=q, choice_text=c, correct=False),
@@ -242,7 +238,6 @@ def question_2(request):
         return render(request, 'question2.html',{'pin': pin, 'k': k, 'j': j, 'l': l})
 
 def question_3(request):
-    ida = 6
     q = Question_own()
     if request.method == 'POST':
         b = request.POST.get('question')
@@ -255,7 +250,6 @@ def question_3(request):
         p = request.POST.get('pin')
         q.question_text = b
         q.pub_date  = '2020-06-24 00:47'
-        q.id = ida
         q.save()
         f = Choice.objects.bulk_create([
             Choice(question=q, choice_text=c, correct=True),
@@ -269,7 +263,6 @@ def question_3(request):
         return render(request, 'question3.html',{'pin': pin, 'k': k, 'j': j, 'l': l})
 
 def question_4(request):
-    ida = 1
     q = Question_own()
     if request.method == 'POST':
         b = request.POST.get('question')
@@ -282,7 +275,6 @@ def question_4(request):
         p = request.POST.get('pin')
         q.question_text = b
         q.pub_date  = '2020-06-24 00:47'
-        q.id = ida
         q.save()
         f = Choice.objects.bulk_create([
             Choice(question=q, choice_text=c, correct=False),
@@ -296,7 +288,6 @@ def question_4(request):
         return render(request, 'question4.html',{'pin': pin, 'k': k, 'j': j, 'l': l})
 
 def question_5(request):
-    ida = 4
     q = Question_own()
     if request.method == 'POST':
         b = request.POST.get('question')
@@ -309,7 +300,6 @@ def question_5(request):
         p = request.POST.get('pin')
         q.question_text = b
         q.pub_date  = '2020-06-24 00:47'
-        q.id = ida
         q.save()
         f = Choice.objects.bulk_create([
             Choice(question=q, choice_text=c, correct=True),
@@ -323,7 +313,6 @@ def question_5(request):
         return render(request, 'question5.html',{'pin': pin, 'k': k, 'j': j, 'l': l})
 
 def question_6(request):
-    ida = 2
     q = Question_own()
     if request.method == 'POST':
         b = request.POST.get('question')
@@ -336,7 +325,6 @@ def question_6(request):
         p = request.POST.get('pin')
         q.question_text = b
         q.pub_date  = '2020-06-24 00:47'
-        q.id = ida
         q.save()
         f = Choice.objects.bulk_create([
             Choice(question=q, choice_text=c, correct=False),

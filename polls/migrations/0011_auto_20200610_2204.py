@@ -18,7 +18,7 @@ class Migration(migrations.Migration):
         migrations.AddField(
             model_name='code',
             name='my_code',
-            field=models.ForeignKey(default='default_code', on_delete=django.db.models.deletion.CASCADE, to='polls.Question'),
+            field=models.ForeignKey(default='1', on_delete=django.db.models.deletion.CASCADE, to='polls.Question'),
             preserve_default=False,
         ),
     ]
