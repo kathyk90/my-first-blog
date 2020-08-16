@@ -104,13 +104,13 @@
                                           <form action="{% url 'accounts:question_5' %}" method="post">
                                             {% csrf_token %}
                                             <p><label for="id_question">Вопрос:</label>
-                                                <input type="text" name="question" id="id_question" /></p>
+                                                <input type="text" name="question" required id="id_question" /></p>
                                                 <p><label for="id_choice"> Правильный вариант ответа:</label>
-                                                    <input type="text" name="choice_1" id="id_choice" /></p>
+                                                    <input type="text" name="choice_1" required id="id_choice" /></p>
                                                     <p><label for="id_choice"> Вариант ответа:</label>
-                                                      <input type="text" name="choice_2" id="id_choice" /></p>
+                                                      <input type="text" name="choice_2" required id="id_choice" /></p>
                                                       <p><label for="id_choice"> Вариант ответа:</label>
-                                                        <input type="text" name="choice_3" id="id_choice" /></p>
+                                                        <input type="text" name="choice_3" required id="id_choice" /></p>
                                                         <input type="hidden" name="age" value="{{ j }}">
                                                           <input type="hidden" name="quantity_text" value="{{ k }}">
                                                           <input type="hidden" name="message" value="{{ l }}">

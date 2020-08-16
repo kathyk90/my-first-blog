@@ -14,8 +14,7 @@ import random
 def index(request):
     b = Code.objects.all()
     b.delete()
-    queryset = Question_own.objects.all()[0:2]
-    latest_question_list = random.sample(set(queryset), 1)
+    latest_question_list = Question_own.objects.filter(pk=2)
     context = {'latest_question_list': latest_question_list}
     return render(request, 'polls/index_15.html', context)
 
@@ -41,8 +40,7 @@ def answer(request, question_id):
             return render(request, 'polls/q_answer_own.html', {'question': question, 'error_message': 'Ответ неверный!'})
       
 def index_2(request):
-    queryset = Question_own.objects.all()[2:4]
-    latest_question_list = random.sample(set(queryset), 1)
+    latest_question_list = Question_own.objects.filter(pk=3)
     context = {'latest_question_list': latest_question_list}
     return render(request, 'polls/index_16.html', context)
 
@@ -68,8 +66,7 @@ def answer_2(request, question_id, key='code'):
 
 
 def index_3(request):
-    queryset = Question_own.objects.all()[4:6]
-    latest_question_list = random.sample(set(queryset), 1)
+    latest_question_list = Question_own.objects.filter(pk=1)
     context = {'latest_question_list': latest_question_list}
     return render(request, 'polls/index_17.html', context)
 
