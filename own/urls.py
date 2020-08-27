@@ -5,6 +5,7 @@ app_name = 'own'
 
 urlpatterns = [
     url('index/', views.index, name='index'),
+    url('own_hello_3/', views.own_hello_3, name='own_hello_3'),
     url('detail/(?P<question_id>[0-9]+)/$', views.detail, name='detail'),
     url('answer/(?P<question_id>[0-9]+)/$', views.answer, name='answer'),
     url('index_2/', views.index_2, name='index_2'),
@@ -21,5 +22,6 @@ urlpatterns = [
     url(r'^(?P<question_id>[0-9]+)/answer_5/$', views.answer_5, name='answer_5'),
     url('index_6', views.index_6, name='index_6'),
     url('detail_6(?P<question_id>[0-9]+)/$', views.detail_6, name='detail_6'),
-    url(r'^(?P<question_id>[0-9]+)/answer_6/$', views.answer_6, name='answer_6')
+    url(r'^(?P<question_id>[0-9]+)/answer_6/$', views.answer_6, name='answer_6'),
+    url('test/', views.test, name='test'),
     ]

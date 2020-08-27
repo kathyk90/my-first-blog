@@ -11,7 +11,7 @@ from django.urls import reverse
 import random
 
 def index(request):
-    queryset = Questions.objects.filter(id__in=[5,6])
+    queryset = Questions.objects.filter(id__in=[1,6])
     latest_question_list = queryset.random() 
     context = {'latest_question_list': latest_question_list}
     return render(request, 'polls/index_2(2).html', context)
@@ -65,7 +65,7 @@ def answer_2(request, question_id, key='code'):
 
 
 def index_3(request):
-    queryset = Questions.objects.filter(id__in=[1,2])
+    queryset = Questions.objects.filter(id__in=[1,5])
     latest_question_list = queryset.random()
     context = {'latest_question_list': latest_question_list}
     return render(request, 'polls/index_4.html', context)

@@ -93,7 +93,7 @@ def answer_3(request, question_id):
         else:
             return render(request, 'a_answer_own_3.html', {'question': question, 'error_message': 'Ответ неверный!'})
 def index_4(request):
-    queryset = Question.objects.all()[7:9]
+    queryset = Question.objects.all()[5:7]
     latest_question_list = random.sample(set(queryset), 1)
     context = {'latest_question_list': latest_question_list}
     return render(request, 'index_68.html', context)

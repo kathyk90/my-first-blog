@@ -67,7 +67,7 @@ def answer_2(request, question_id, key='code'):
 
 
 def index_3(request):
-    queryset = Question.objects.all()[8:9]
+    queryset = Question.objects.all()[7:9]
     latest_question_list = random.sample(set(queryset), 1)
     context = {'latest_question_list': latest_question_list}
     return render(request, 'index_57.html', context)

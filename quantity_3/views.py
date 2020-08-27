@@ -1,7 +1,7 @@
 from django.shortcuts import render
 from django.http import HttpResponseRedirect, HttpResponse
 from child.models import Questions, Choice
-from own.models import Question_own, Choice
+from own.models import Question_own, Choice, Persona
 from polls.models import Code
 from django.template import RequestContext, loader
 from django.http import Http404
@@ -12,11 +12,19 @@ import random
 
 # Create your views here.
 def index(request):
-    b = Code.objects.all()
-    b.delete()
-    latest_question_list = Question_own.objects.filter(pk=2)
-    context = {'latest_question_list': latest_question_list}
-    return render(request, 'polls/index_15.html', context)
+    if request.method == 'POST':
+        p = request.POST.get('pin')
+        y = str(p)
+        z = Persona.objects.filter(pin_code=p).values_list('id')
+        b = Code.objects.all()
+        b.delete()
+        k = list(z[0])
+        m = str(k[0])
+        q = Question_own.objects.filter(persona_id=m,id=2)
+        latest_question_list = q
+        request.session["pid"] = m
+        context = {'latest_question_list': latest_question_list}
+        return render(request, 'polls/index_15.html', context)
 
 
 def detail(request, question_id):
@@ -40,7 +48,8 @@ def answer(request, question_id):
             return render(request, 'polls/q_answer_own.html', {'question': question, 'error_message': 'Ответ неверный!'})
       
 def index_2(request):
-    latest_question_list = Question_own.objects.filter(pk=3)
+    m = request.session["pid"]
+    latest_question_list =  Question_own.objects.filter(id=3, persona_id=m)
     context = {'latest_question_list': latest_question_list}
     return render(request, 'polls/index_16.html', context)
 
@@ -66,7 +75,8 @@ def answer_2(request, question_id, key='code'):
 
 
 def index_3(request):
-    latest_question_list = Question_own.objects.filter(pk=1)
+    m = request.session["pid"]
+    latest_question_list =  Question_own.objects.filter(id=1, persona_id=m)
     context = {'latest_question_list': latest_question_list}
     return render(request, 'polls/index_17.html', context)
 

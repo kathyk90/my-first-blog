@@ -12,7 +12,7 @@ import random
 
 
 def index(request):
-    queryset = Question.objects.filter(id__in=[7,8,9,10])
+    queryset = Question.objects.filter(id__in=[3,7,8,9,10,13])
     latest_question_list = queryset.random() 
     context = {'latest_question_list': latest_question_list}
     return render(request, 'quest/index.html', context)

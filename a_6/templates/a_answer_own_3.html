@@ -12,13 +12,13 @@
               <!doctype html>
               {% load static %}
               <html lang="en">
-                <head>
-                  <meta charset="utf-8">
-                  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no, user-scalable=0">
-                  <meta name="description" content="Lewis - Creative Portfolio HTML Template">
-                  <meta name="author" content="Paul, Logan Cee">
+              <head>
+                <meta charset="utf-8">
+                <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no, user-scalable=0">
+                <meta name="description" content="Quest-X - твой интерактивный квест">
+                <meta name="author" content="">
 
-                  <title>Quest-X</title>
+                <title>Quest-X</title>
 
                   <!-- CSS -->
                   <link href="{% static 'Ethant Hunt/html/html/css/bootstrap.min.css' %}" rel="stylesheet">
@@ -68,8 +68,8 @@
 
                           <div class="menu-footer">
                             <div class="menu-footer-contacts">
-                              <div class="menu-footer-phone"><a href="tel:+79163912391" class="phone-link">+7-916-391-23-91</a></div>
-                              <div class="menu-footer-mail"><a href="mailto:e.koshelevi@gmail.com" class="mail-link">e.koshelevi@gmail.com</a></div>
+
+                              <div class="menu-footer-mail"><a href="mailto:info@factorybase.ru" class="mail-link">info@factorybase.ru</a></div>
                             </div>
                             <div class="menu-footer-copyright">&copy; Quest-X 2020. All Rights Reseverd</div>
                           </div>
@@ -100,7 +100,7 @@
                                       {% endif %}</h1>
                                     <nav class="service-list animate-element delay9 fadeInUp">
                                       <ul class="">
-                                        <li class="primary-link" style='font-family: Comic Sans MS; font-size: 28px;'><form action="{% url 'a_6:answer_3' question.id %}" method="post">
+                                        <li class="primary-link" style='font-family: Comic Sans MS; font-size: 26px;'><form action="{% url 'a_6:answer_3' question.id %}" method="post">
                                             {% csrf_token %}
                                             {% for choice in Question.choice_set.all %}
                                                 <input type="radio" name="choice" id="choice{{ forloop.counter }}" value="{{ choice.id }}" />
@@ -169,3 +169,8 @@
 
                               </body>
                             </html>
+                            <style>
+                              @media (max-width: 330px)  {
+                                     .brand-name {display: none;}/* это будет показано при разрешении монитора до 930 пикселей */
+                                     .primary-link {font-size: 20px;}}
+                          </style>

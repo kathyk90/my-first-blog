@@ -18,13 +18,13 @@ from django.conf.urls import include, url
 from django.contrib import admin
 
 urlpatterns = [
+    url('accounts/', include('accounts.urls')),
     url(r'^ris/', include('ris.urls')),
     url(r'^hello/', include('hello.urls')),
     url(r'^polls/', include('polls.urls')),
     url(r'^tot/', include('tot.urls')),
     url(r'^quest/', include('quest.urls')),
     url(r'^admin/', admin.site.urls),
-    url(r'^accounts/', include('accounts.urls')),
     url(r'^child/', include('child.urls')),
     url(r'^own/', include('own.urls')),
     url(r'^quantity_3/', include('quantity_3.urls')),

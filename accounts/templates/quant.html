@@ -5,7 +5,7 @@
     <title>Quest-X</title>
 </head>
   <body>
-    <p> {{ a }}</p>
+    <p> </p>
 
 </body>
   </html>
@@ -15,8 +15,8 @@
     <head>
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no, user-scalable=0">
-      <meta name="description" content="Lewis - Creative Portfolio HTML Template">
-      <meta name="author" content="Paul, Logan Cee">
+      <meta name="description" content="Quest-X - твой интерактивный квест">
+      <meta name="author" content="">
 
       <title>Quest-X</title>
 
@@ -68,8 +68,8 @@
 
               <div class="menu-footer">
                 <div class="menu-footer-contacts">
-                  <div class="menu-footer-phone"><a href="tel:+79163912391" class="phone-link">+7-916-391-23-91</a></div>
-                  <div class="menu-footer-mail"><a href="mailto:e.koshelevi@gmail.com" class="mail-link">e.koshelevi@gmail.com</a></div>
+
+                  <div class="menu-footer-mail"><a href="mailto:info@factorybase.ru" class="mail-link">info@factorybase.ru</a></div>
                 </div>
                 <div class="menu-footer-copyright">&copy; Quest-X 2020. All Rights Reseverd</div>
               </div>
@@ -102,7 +102,7 @@
                               <div class="slide-descr testimonial-item-text">  <form action='{% url 'accounts:message' %}'method="post"> {% csrf_token %}
                                 <nav class="service-list animate-element delay9 fadeInUp">
                                   <ul class="">
-                                    <li class="primary-link" style='font-family: Comic Sans MS;'><input name="quantity_text" type="radio" value="3"> 3 </a></li>
+                                    <li class="primary-link" style='font-family: Comic Sans MS;'><input name="quantity_text" type="radio" value="3" checked> 3 </a></li>
                                     <li class="primary-link" style='font-family: Comic Sans MS;'><input name="quantity_text" type="radio" value="6"> 6 </a></li>
                                     <li class="primary-link" style='font-family: Comic Sans MS;'>    <input name="quantity_text" type="radio" value="9"> 9 </a></li>
                                      <input type="hidden" name="age" value="{{ d }}">
@@ -112,7 +112,7 @@
                                   <div class="align-self-center mr-3"><div class="avatar testimonial-avatar"><div class="inside" style="background-image: url(img/pic1.jpg);"></div></div></div>
                                   <div class="align-self-center media-body">
                                     <div class="testimonial-item-author-name"></div>
-                                    <div class="testimonial-item-author-status"><input type="submit" value="Дальше">
+                                    <div class="testimonial-item-author-status"> <button type="submit" class="btn btn-dark" value="Далее">Далее</button>
                                   </form></div></div>
                                   </div>
                                 </div>
@@ -190,3 +190,27 @@
 
                   </body>
                 </html>
+                <style>
+
+                @media (max-width: 330px) {
+                  /* это будет показано при разрешении монитора до 930 пикселей */
+                .col-md-5
+                { text-align: center;
+                margin-top: 180px;}
+              }
+              @media (min-width: 340px) and (max-width: 380px) {
+                /* это будет показано при разрешении монитора до 930 пикселей */
+              .col-md-5
+              {
+              text-align: center;
+              }
+
+
+
+            }
+
+              @media (min-width: 400px) and (max-width: 420px)  { /* это будет показано при разрешении монитора до 930 пикселей */
+              .col-md-5
+              { text-align: center;}}
+
+              </style>

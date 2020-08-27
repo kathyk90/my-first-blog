@@ -15,8 +15,8 @@
         <head>
           <meta charset="utf-8">
           <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no, user-scalable=0">
-          <meta name="description" content="Lewis - Creative Portfolio HTML Template">
-          <meta name="author" content="Paul, Logan Cee">
+          <meta name="description" content="Quest-X - твой интерактивный квест">
+          <meta name="author" content="">
 
           <title>Quest-X</title>
 
@@ -68,8 +68,8 @@
 
                   <div class="menu-footer">
                     <div class="menu-footer-contacts">
-                      <div class="menu-footer-phone"><a href="tel:+79163912391" class="phone-link">+7-916-391-23-91</a></div>
-                      <div class="menu-footer-mail"><a href="mailto:e.koshelevi@gmail.com" class="mail-link">e.koshelevi@gmail.com</a></div>
+
+                      <div class="menu-footer-mail"><a href="mailto:info@factorybase.ru" class="mail-link">info@factorybase.ru</a></div>
                     </div>
                     <div class="menu-footer-copyright">&copy; Quest-X 2020. All Rights Reseverd</div>
                   </div>
@@ -97,13 +97,13 @@
                               <div class="title-mini text-primary">Подготовка завершена</div>
                               <h1 class="slide-title font-custom slide-title-margin-lg" style='font-family: Comic Sans MS;'>Передайте Игроку <span class="text-typed a-typed a-typed-portfolio" data-text="Pin-код и ссылку"></span> на приложение.</h1>
                             </div>
-                            <div class="slide-descr animate-element delay7 fadeInUp" style='font-family: Comic Sans MS; font-size: 28px;' align='left'> Pin-код: {{ l }} <br><a href=https://questx.pythonanywhere.com/accounts/trai_2/>Ссылка для доступа к квесту</a>
+                            <div class="slide-descr animate-element delay7 fadeInUp" style='font-family: Comic Sans MS; font-size: 25px;' align='left'> Pin-код: {{ l }} <br><a href=https://questx.pythonanywhere.com/accounts/trai_2/>Ссылка для доступа к квесту</a>
                               <input type="hidden" name="pin" value="{{ p }}">
-                            <div class="slide-descr animate-element delay7 fadeInUp" style='font-family: Comic Sans MS; font-size: 15px;' align='left'> * Игрок может перейти по ссылке выше или зайти на главную страницу <br> в раздел "Разгадать квест".<br>** После прохождения квеста Pin-код станет не дейсвителен.</div>
+                            <div class="slide-descr animate-element delay7 fadeInUp" style='font-family: Comic Sans MS; font-size: 12px;' align='left'> * Игрок может перейти по ссылке выше или зайти на главную страницу <br> в раздел "Разгадать квест".<br>** После прохождения квеста Pin-код станет не дейсвителен.</div>
                             <nav class="service-list animate-element delay9 fadeInUp">
                               <ul class="">
                                 <li class="primary-link" style='font-family: Comic Sans MS;'><form action="{% url 'accounts:trai' %}" method="post">  {% csrf_token %}
-                                  Игрок готов начать сразу же <input type="submit" value="Приступить">
+                                  Игрок готов начать сразу же <button type="submit" class="btn btn-dark" value="Приступить">Приступить</button>
 
                             </form>
                           </div>
@@ -161,3 +161,32 @@
 
                       </body>
                     </html>
+                    <style>
+                    @media (max-width: 330px)  { /* это будет показано при разрешении монитора до 930 пикселей */
+                      .slide-descr
+                      {margin-left: 20px;}
+
+                      .slide-title {font-size: 22px;}
+                      .copyright {display: none;}
+
+                    .slide-ornament {display: none;}
+                  .primary-link {text-align: center;}}
+
+                    @media (min-width: 340px) and (max-width: 380px) {
+                      .slide-descr
+                      {margin-left: 20px;
+                      }
+                      .copyright {display: none;}
+                      /* это будет показано при разрешении монитора до 930 пикселей */
+                    .slide-ornament {display: none;}
+                  .primary-link {text-align: center;}}
+
+
+                    @media (min-width: 400px) and (max-width: 420px)  {
+                      .slide-descr
+                      {margin-left: 20px;
+                      } /* это будет показано при разрешении монитора до 930 пикселей */
+                  .slide-ornament {display: none;}
+                .primary-link {text-align: center;}}
+
+                    </style>

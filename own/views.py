@@ -1,25 +1,38 @@
 from django.shortcuts import render
 from django.http import HttpResponseRedirect, HttpResponse
 from child.models import Questions, Choice
-from own.models import Question_own, Choice
+from own.models import Question_own, Choice, Persona
 from polls.models import Code
 from django.template import RequestContext, loader
 from django.http import Http404
 from django.shortcuts import get_object_or_404, render
 from django.urls import reverse
 import random
+from accounts.models import Age
+
+def own_hello_3(request):
+    return render(request, 'polls/hello_3.html')  
 
 def index(request):
-    b = Code.objects.all()
-    b.delete()
-    latest_question_list = Question_own.objects.filter(pk=4)
-    context = {'latest_question_list': latest_question_list}
-    return render(request, 'polls/index_5.html', context)
+    if request.method == 'POST':
+        p = request.POST.get('pin')
+        y = str(p)
+        z = Persona.objects.filter(pin_code=p).values_list('id')
+        b = Code.objects.all()
+        b.delete()
+        k = list(z[0])
+        m = str(k[0])
+        q = Question_own.objects.filter(persona_id=m,id=4)
+        latest_question_list = q
+        request.session["pid"] = m
+        context = {'latest_question_list': latest_question_list}
+        return render(request, 'polls/index_5.html', context)
 
 
 def detail(request, question_id):
     question = get_object_or_404(Question_own, pk=question_id)
     return render(request, 'detail_own.html', {'question': question})
+    
 
 
 def answer(request, question_id):
@@ -38,9 +51,9 @@ def answer(request, question_id):
             return render(request, 'answer_own.html', {'question': question, 'error_message': 'Ответ неверный!'})
       
 def index_2(request):
-    latest_question_list = Question_own.objects.filter(pk=2)
-    p = Question_own.objects.values()
-    context = {'latest_question_list': latest_question_list, 'p': p}
+    m = request.session["pid"]
+    latest_question_list =  Question_own.objects.filter(id=2, persona_id=m)
+    context = {'latest_question_list': latest_question_list}
     return render(request, 'polls/index_6.html', context)
 
 def detail_2(request, question_id):
@@ -65,7 +78,9 @@ def answer_2(request, question_id, key='code'):
 
 
 def index_3(request):
-    latest_question_list = Question_own.objects.filter(pk=6)
+    m = request.session["pid"]
+    q = Question_own.objects.filter(id=6, persona_id=m)
+    latest_question_list = q
     context = {'latest_question_list': latest_question_list}
     return render(request, 'polls/index_7.html', context)
 
@@ -89,9 +104,10 @@ def answer_3(request, question_id):
         else:
             return render(request, 'answer_own_3.html', {'question': question, 'error_message': 'Ответ неверный!'})
 def index_4(request):
-    latest_question_list = Question_own.objects.filter(pk=1)
-    p = Question_own.objects.values()
-    context = {'latest_question_list': latest_question_list, 'p': p}
+    m = request.session["pid"]
+    q = Question_own.objects.filter(id=1, persona_id=m)
+    latest_question_list = q
+    context = {'latest_question_list': latest_question_list}
     return render(request, 'polls/index_8.html', context)
 
 
@@ -116,7 +132,9 @@ def answer_4(request, question_id):
             return render(request, 'answer_own_4.html', {'question': question, 'error_message': 'Ответ неверный!'})
       
 def index_5(request):
-    latest_question_list = Question_own.objects.filter(pk=5)
+    m = request.session["pid"]
+    q = Question_own.objects.filter(id=5, persona_id=m)
+    latest_question_list = q
     context = {'latest_question_list': latest_question_list}
     return render(request, 'polls/index_9.html', context)
 
@@ -142,7 +160,9 @@ def answer_5(request, question_id):
 
 
 def index_6(request):
-    latest_question_list = Question_own.objects.filter(pk=3)
+    m = request.session["pid"]
+    q = Question_own.objects.filter(id=3, persona_id=m)
+    latest_question_list = q
     context = {'latest_question_list': latest_question_list}
     return render(request, 'polls/index_10.html', context)
 
@@ -168,4 +188,8 @@ def answer_6(request, question_id):
         else:
             return render(request, 'answer_own_6.html', {'question': question, 'error_message': 'Ответ неверный!'})
 
-        
+def test(request):
+    z = Persona.objects.values()
+    q = Question_own.objects.values()
+    p = Persona_2.objects.values('p_id')
+    return render(request, 'test.html', {'z': z, 'q':q, 'p':p})

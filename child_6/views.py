@@ -15,7 +15,7 @@ import random
 def index(request):
     b = Code.objects.all()
     b.delete()
-    queryset = Questions.objects.filter(id__in=[5,6])
+    queryset = Questions.objects.filter(id__in=[1,6])
     latest_question_list = queryset.random()
     context = {'latest_question_list': latest_question_list}
     return render(request, 'index_25.html', context)
@@ -94,7 +94,7 @@ def answer_3(request, question_id):
         else:
             return render(request, 'ch_answer_own_3.html', {'question': question, 'error_message': 'Ответ неверный!'})
 def index_4(request):
-    queryset = Questions.objects.filter(id__in=[4,5])
+    queryset = Questions.objects.filter(id__in=[3,5])
     latest_question_list = queryset.random()
     context = {'latest_question_list': latest_question_list}
     return render(request, 'index_28.html', context)

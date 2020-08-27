@@ -1,7 +1,6 @@
 /* ------------------------------------------------------------------------------
 
-  Template Name: Lewis
-  Description: Ethant Hunt HTML Template
+  Template Name: Quest-X
   Author: Paul
   Author URI: http://themeforest.net/user/paul_tf
 
@@ -697,6 +696,8 @@ html:not(.body-menu-opened) .hamburger:hover .bottom-bun {
 	flex-wrap: wrap;
 }
 
+
+
 .wrapper #footer {
 	flex: 0 0 auto;
 }
@@ -708,6 +709,9 @@ html:not(.body-menu-opened) .hamburger:hover .bottom-bun {
 	overflow-x: hidden;
 	overflow-y: auto;
 }
+
+
+
 
 .section {
 	min-height: 100%;

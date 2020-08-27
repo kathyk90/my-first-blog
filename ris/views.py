@@ -10,7 +10,7 @@ from django.urls import reverse
 import random
 
 def index(request):
-    queryset = Question.objects.filter(id__in=[12,13 ])
+    queryset = Question.objects.filter(id__in=[2,13 ])
     latest_question_list = queryset.random() 
     context = {'latest_question_list': latest_question_list}
     return render(request, 'ris/index.html', context)

@@ -97,7 +97,7 @@ def answer_3(request, question_id):
         else:
             return render(request, 'c_answer_own_3.html', {'question': question, 'error_message': 'Ответ неверный!'})
 def index_4(request):
-    queryset = Questions.objects.filter(id__in=[4,5])
+    queryset = Questions.objects.filter(id__in=[3,5])
     latest_question_list = queryset.random()
     context = {'latest_question_list': latest_question_list}
     return render(request, 'index_48.html', context)
@@ -178,7 +178,7 @@ def answer_6(request, question_id):
             return render(request, 'c_answer_own_6.html', {'question': question, 'error_message': 'Ответ неверный!'})
 
 def index_7(request):
-    queryset = Questions.objects.filter(id__in=[5,6])
+    queryset = Questions.objects.filter(id__in=[2,6])
     latest_question_list = queryset.random()
     context = {'latest_question_list': latest_question_list}
     return render(request, 'index_35.html', context)
